@@ -5,7 +5,7 @@ class Solution {
         HashSet<Integer> set = new HashSet<>();
         int ans = 1;
         for (int num : nums) set.add(num);
-        for (int num : nums) {
+        for (int num : set) { //reduces the runtime significantly
             if (!set.contains(num - 1)) {
                 int count = 1;
                 while (set.contains(num + 1)) {
